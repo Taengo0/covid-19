@@ -1,8 +1,8 @@
 import React from 'react';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
-  Route
+  Route,
 } from "react-router-dom"
 import Header from './Components/Header'
 import Footer from './Components/Footer'

@@ -5,7 +5,7 @@ function NavigationMenu(props){
     return (
         <div>
             <div className="font-bold py-3">
-                AppName
+                Covid-19 Overview
             </div>
             <ul>
                 <li>
@@ -26,15 +26,15 @@ function NavigationMenu(props){
                         About
                     </Link>
                 </li>
-                <li>
-                    <Link
-                        to="/overview"
-                        className="text-blue-500 py-3 border-b block"
-                        onClick={props.closeMenu}
-                    >
-                        Overview
-                    </Link>
-                </li>
+                {/*<li>*/}
+                {/*    <Link*/}
+                {/*        to="/overview"*/}
+                {/*        className="text-blue-500 py-3 border-b block"*/}
+                {/*        onClick={props.closeMenu}*/}
+                {/*    >*/}
+                {/*        Overview*/}
+                {/*    </Link>*/}
+                {/*</li>*/}
                 <li>
                     <Link
                         to="/map"

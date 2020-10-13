@@ -2,51 +2,11 @@ import React from 'react'
 import {useAxiosGet} from "../Hooks/HttpRequests";
 import Loader from "../Components/Loader";
 import { Line } from "react-chartjs-2";
-import axios from 'axios'
 
 
 function Overview() {
     const url = "https://api.covid19api.com/summary";
     const [chartData, setChartData] = React.useState({});
-    const [employeeSalary, setEmployeeSalary] = React.useState([]);
-    const [employeeAge, setEmployeeAge] = React.useState([]);
-    let graphData = useAxiosGet("https://api.covid19api.com/dayone/country/malaysia/status/confirmed/live");
-
-    const chart = () => {
-        let day = [];
-        let cases = [];
-        axios
-            .get("https://api.covid19api.com/country/malaysia/status/confirmed?from=2020-01-25T00:00:00Z&to=2020-10-10T00:00:00Z")
-            .then(res => {
-                res.data.map((item, i) => {
-                    day.push(item.Date);
-                    cases.push(item.Cases);
-
-
-                })
-                // for (const dataObj of res.data.data) {
-                //     day.push(parseInt(dataObj.employee_salary));
-                //     cases.push(parseInt(dataObj.employee_age));
-                // }
-            })
-
-        setChartData({
-            labels: day,
-            datasets: [
-                {
-                    label: "Confirmed cases",
-                    data: cases,
-                    backgroundColor: ["rgba(75, 192, 192, 0.6)"],
-                    borderWidth: 4
-                }
-            ]
-        });
-    }
-
-    React.useEffect(() => {
-        chart();
-    }, []);
-
 
     let summary = useAxiosGet(url)
     console.log(summary)

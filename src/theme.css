@@ -113,6 +113,9 @@
     font-size: 2rem;
     color: rgba(255, 255, 255, 0.6);
 }
+.sidebarWidth {
+    width: 20%;
+}
 
 @media (min-width: 992px) and (max-width: 1199px) {
     .overview-box .text {
@@ -127,6 +130,9 @@
     .overview-box .text span {
         font-size: 2rem;
     }
+    .sidebarWidth {
+        width: 40%;
+    }
 }
 
 @media (max-width: 991px) {
@@ -136,6 +142,9 @@
 
     .overview-box .text span {
         font-size: 2rem;
+    }
+    .sidebarWidth {
+        width: 80%;
     }
 }
 
@@ -147,9 +156,9 @@
 .overview-chart canvas {
     width: 100%;
 }
-.ikhwan {
-    /*background: -webkit-linear-gradient(90deg, #3f5efb 0%, #fc466b 100%);*/
-    background-image: -moz-linear-gradient(90deg, #3f5efb 0%, #fc466b 100%);
-    background-image: -webkit-linear-gradient(90deg, #3f5efb 0%, #fc466b 100%);
-    background-image: -ms-linear-gradient(90deg, #3f5efb 0%, #fc466b 100%);
+.gradCard {
+    color: white;
+    font-size: 2rem;
+    padding: 10px;
+    text-align: center;
 }

@@ -1,6 +1,5 @@
 import React from 'react'
 import {useAxiosGet} from "../Hooks/HttpRequests";
-import Loader from "../Components/Loader";
 import { GoogleMap, LoadScript } from '@react-google-maps/api';
 import MapStyles from "../Components/MapStyles";
 import { Marker } from '@react-google-maps/api';
@@ -8,7 +7,8 @@ import { Marker } from '@react-google-maps/api';
 function Map() {
     const containerStyle = {
         width: '90vw',
-        height: '90vh'
+        height: '90vh',
+        margin: "auto",
     };
 
     const center = {
@@ -77,8 +77,6 @@ function Map() {
             }]);
     });
 
-
-
     // if(summary.error){
     //     content = <div>
     //         <div className="bg-blue-300 mb-2 p-3">
@@ -97,7 +95,7 @@ function Map() {
     console.log(summary.data)
     if(summary.data){
         content =
-            <div className="container mx-auto">
+            <div>
             <LoadScript
                 googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}
             >
@@ -132,7 +130,7 @@ function Map() {
     }
 
     return (
-        <div className="container mx-auto">
+        <div className="">
             {content}
         </div>
     )
